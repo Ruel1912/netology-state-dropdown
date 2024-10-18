@@ -3,11 +3,11 @@ import { useState } from 'react';
 const Dropdown = () => {
   const dropdownItems = ['Profile Information', 'Change Password', 'Become PRO', 'Help', 'Log Out'];
   const [selectedItem, setSelectedItem] = useState('Profile Information');
-  const [isOpenDropdown, setIsOpenDropdown] = useState(true);
+  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
 
   return (
     <div className={`dropdown-wrapper ${isOpenDropdown ? 'open' : ''}`}>
-      <button className="btn" onClick={() => setIsOpenDropdown(!isOpenDropdown)}>
+      <button className="btn" onClick={() => setIsOpenDropdown(prev => !prev)}>
         <span>Account Settings</span>
         <i className="material-icons">public</i>
       </button>
