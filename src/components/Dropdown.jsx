@@ -6,7 +6,7 @@ const Dropdown = () => {
   const [isOpenDropdown, setIsOpenDropdown] = useState(true);
 
   return (
-    <div className={`dropdown-wrapper ${isOpenDropdown && 'open'}`}>
+    <div className={`dropdown-wrapper ${isOpenDropdown ? 'open' : ''}`}>
       <button className="btn" onClick={() => setIsOpenDropdown(!isOpenDropdown)}>
         <span>Account Settings</span>
         <i className="material-icons">public</i>
