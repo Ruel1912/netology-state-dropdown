@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const Dropdown = () => {
   const dropdownItems = ['Profile Information', 'Change Password', 'Become PRO', 'Help', 'Log Out'];
-  const [selectedItem, setSelectedItem] = useState('Profile Information');
+  const [selectedItem, setSelectedItem] = useState(dropdownItems[0]);
   const [isOpenDropdown, setIsOpenDropdown] = useState(false);
 
   return (
